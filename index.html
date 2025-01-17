@@ -39,6 +39,18 @@
         <h3>數字：{{ count }}</h3>
         <div class="btn" v-on:mouseover="count++">滑我</div>
         <h3>數字：{{ count }}</h3>
+        <div class="btn" @click="count++">事件簡寫：點我</div>
+        <h3>數字：{{ count }}</h3>
+        <div class="btn" @click.once="count++">點擊一次事件</div>
+        <h3>數字：{{ count }}</h3>
+        <div class="btn" @click.right="count++">點擊右鍵事件</div>
+        <h3>數字：{{ count }}</h3>
+
+        <h1>六、Vue 方法(函式) function = method</h1>
+        <div class="btn" @click="test">點擊後會呼叫測試方法</div>
+        <div class="btn" @click="methodEvent">點擊後會獲得點擊事件的資料</div>
+        <div class="btn" @click="getPoint($event)">點擊後會儲存座標</div>
+        <p>點擊後的座標：{{ pointX }}, {{ pointY }}</p>
     </div>
 
     <!-- 無安裝的元素無法使用 -->

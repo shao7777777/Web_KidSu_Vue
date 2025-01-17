@@ -14,8 +14,27 @@ const app = Vue.createApp({
             web: [
                 "HtML", "CSS", "JavaScript", "jQuery", "Vue", "React", "Angular", "Git"
             ],
-            count: 0
+            count: 0,
+            pointX: 0, pointY: 0
         }
+    },
+    // 方法區 (函式區)
+    methods: {
+        // 方法名稱 () {}
+        test() {
+            console.log("我是測試方法");
+        },
+        methodEvent(e) {
+            console.log(e);
+            console.log(e.target);
+            console.log(e.x, e.y);  //點下去的座標
+        },
+        getPoint(e) {
+            this.pointX = e.x;  // this 指此 Vue 應用程式內的資料
+            this.pointY = e.y;
+
+        }
+
     }
 });
 
