@@ -22,9 +22,10 @@ body {
     display: inline-block;
     margin: 5px;
     cursor: pointer;
+    /* color: #202020; */
 }
 
-input, button {
-    margin: 10px;
+input, form button {
     color: #202020;
+    background: #fff;
 }

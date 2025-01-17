@@ -17,7 +17,7 @@ const app = Vue.createApp({
             count: 0,
             pointX: 0, pointY: 0,
             inputText: "我是預設文字啦~",
-            toDoList: [], addToDo: ""
+            toDoList: [], addToDo: "", isCheck: false
         }
     },
     // 方法區 (函式區)
@@ -40,6 +40,15 @@ const app = Vue.createApp({
             this.toDoList.push(this.addToDo);
         }
 
+    },
+    // 計算處理區
+    computed: {
+        // 需要監聽資料以及處理的內容
+        // 當資料內的 ischeck 被改變時會處理
+        checked() {
+            if (this.isCheck) return "已被勾選";    //如果使用者將 isCheck 勾選會執行這裡
+            else return "尚未勾選"                  //否則執行這裡
+        }
     }
 });
 
