@@ -15,7 +15,9 @@ const app = Vue.createApp({
                 "HtML", "CSS", "JavaScript", "jQuery", "Vue", "React", "Angular", "Git"
             ],
             count: 0,
-            pointX: 0, pointY: 0
+            pointX: 0, pointY: 0,
+            inputText: "我是預設文字啦~",
+            toDoList: [], addToDo: ""
         }
     },
     // 方法區 (函式區)
@@ -32,7 +34,10 @@ const app = Vue.createApp({
         getPoint(e) {
             this.pointX = e.x;  // this 指此 Vue 應用程式內的資料
             this.pointY = e.y;
-
+        },
+        addToDoList() {
+            // 將 addToDo 添加到 toDoList 陣列內
+            this.toDoList.push(this.addToDo);
         }
 
     }
